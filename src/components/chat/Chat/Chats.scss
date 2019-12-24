@@ -1,0 +1,132 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700&display=swap&subset=cyrillic,cyrillic-ext,latin-ext);
+//font-family: 'PT Sans Caption', sans-serif;
+//regular 400, bold 700
+//langs: Cyrillic, Cyrillic Extended, Latin, Latin Extended  
+
+.chat {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40vh;
+  max-height: 450px;
+  z-index: 4;
+  background: rgba(0%, 0%, 0%, 1);
+  display: flex;
+  font-family: 'PT Sans Caption', sans-serif;
+
+  &::before {
+    width: 100%;
+    height: 4vh;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1) );
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    z-index: -1;
+  }
+
+  &__imgContainer {
+    width: 33%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  &__person {
+    width: 30vw;
+    height: 48vw;
+    margin-top: -10vw;
+    display: block;
+    bottom: 0;
+  }
+
+  &__container {
+    width: 100%;
+    max-width: 66%;
+    height: inherit;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  &__personName {
+    font-size: 36px;
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+    position: relative;
+    width: 300px;
+    margin-bottom: 40px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 55px;
+      border-radius: 50%;
+      width: 300px;
+      height: 5px;
+      background: white;
+      display: block;
+    }
+  }
+
+  &__text {
+    color: white;
+    margin: 0 auto;
+    font-size: 2.5vh;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  &__help {
+    color: #EBB531;
+    font-size: 2.5vh;
+    text-align: center;
+    animation-name: help;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+  }
+
+  &__nextButton {
+    display: none;
+  }
+}
+
+.blocker {
+  &::after {
+    width: 100%;
+    height: 100vh;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.inShadow {
+  animation-name: inShadow;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes help {
+  0% {opacity: 0;}
+
+  100% {opacity: 1;}
+}
+
+@keyframes inShadow {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}

@@ -1,0 +1,207 @@
+.classDescription {
+  background: black;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Crete Round', serif;
+  color: white;
+  z-index: 10;
+  padding-right: 50px;
+  box-sizing: border-box;
+
+  &__heroClass {
+    font-size: 68px;
+    text-align: center;
+    color: #EBB531;
+    position: relative;
+    margin-bottom: 3vh;
+    left: 25px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 80px;
+      left: calc(9.63vw - 25px);
+      border-radius: 50%;
+      width: 19.25vw;
+      height: 5px;
+      background: white;
+      display: block;
+    }
+  }
+
+  &__descriptionContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__heroContainer {
+    display: flex;
+    align-items: center;
+    width: 38.5vw;
+    margin-bottom: 1.5vh;
+    margin-left: 50px;
+  }
+  
+  &__nameText {
+    font-size: 1.5vw;
+    width: 16vw;
+  }
+
+  &__name {
+    font-size: 1.5vw;
+    color: #EBB531;
+  }
+
+  &__phantasmContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 38.5vw;
+    margin-bottom: 3vh;
+    position: relative;
+    margin-left: 50px;
+  }
+
+  &__phantasmText {
+    width: 16vw;
+    font-size: 1.5vw;
+    margin-bottom: 10px;
+  }
+
+  &__phantasmName {
+    font-size: 1.5vw;
+    color: #EBB531;
+    margin-bottom: 10px;
+  }
+
+  &__phantasmShortDescription {
+    font-size: 1.3vw;
+    min-height: 10vh;
+  }
+
+  &__charactersContainer {
+    width: calc(38.5vw - 50px);
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3vh;
+  }
+
+  &__charactersName {
+    font-size: 48px;
+    color: #EBB531;
+    margin-bottom: 30px;
+  }
+
+  &__charScaleContainer {
+    display: flex;
+    width: calc(38.5vw - 100px);
+    align-items: baseline;
+    margin-bottom: 10px;
+  }
+
+  &__scaleText {
+    font-size: 1.5vw;
+    height: 3vh;
+    width: calc(20.5vw - 100px);
+  }
+
+  &__scale {
+    width: 22vw;
+    height: 2vh;
+    border-radius: 2vh;
+    border: 2px solid white;
+    position: relative;
+    background: transparent;
+    display: flex;
+    overflow: hidden;
+
+    &::before {
+      width: 22vw;
+      height: 1vh;
+      background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.1) );
+      border-radius: 2vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+    }
+  }
+
+  &__scaleEl {
+    width: 2.2vw;
+    height: 2vh;
+  }
+
+  &__scaleEl_strength {
+    background: #ED413E;
+  }
+
+  &__scaleEl_dexterity {
+    background: #00ACAD
+  }
+
+  &__scaleEl_endurance {
+    background: #F9A81B;
+  }
+
+  &__scaleEl_intelligence {
+    background: #A62290;
+  }
+
+  &__scaleEl_wisdom {
+    background: #0268B3;
+  }
+
+  &__scaleEl_charm {
+    background: #02A661;
+  }
+
+  &__submitForm {
+    display: flex;
+    align-items: center;
+    width: calc(38.5vw - 100px);
+    justify-content: center;
+    margin-left: 50px;
+  }
+
+  &__submit {
+    background-color: rgba(19,19,19,0.35);
+    border: 2px solid white;
+    display: block;
+    color:#fff;
+    height: 60px;
+    width: 13vw;
+    box-shadow: inset 0 0 7px rgba(0,0,0,0.5);
+    border-radius: 16px;
+    position: relative;
+    transition: all 0.1s ease-in-out 0.1s;
+    overflow: hidden;
+    font-size: 1.5vw;
+
+    &::before {
+      content: ".";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: transparent;
+      width: 13vw;
+      height: 20px;
+      background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1) );
+      display: block;
+      transition: all 0.1s ease-in-out 0.1s;
+    }
+
+    &:hover {
+      border: 2px solid white;
+      width: 15vw;
+      height: 70px;
+    }
+    
+    &:hover:before {
+      width: 15vw;
+      height: 25px;
+    }
+  }
+}

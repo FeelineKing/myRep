@@ -1,0 +1,111 @@
+.classChoose {
+  position: absolute;
+  display: flex;
+  z-index: 3;
+  bottom: 0;
+  overflow: hidden;
+
+  &__container {
+    display: flex;
+    width: 61.5vw;
+  }
+
+  &__element {
+    width: 25vw;
+    height: 40vw;
+    position: relative;
+  }
+
+  &__classImg {
+    width: 25vw;
+    height: 40vw;
+    position: relative;
+    opacity: 1;
+    animation-duration: 2s;
+    opacity: 0;
+  }
+
+  &__mask {
+    width: 25vw;
+    height: 40vw;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: black;
+    mask-size: 25vw 40vw !important;
+  }
+
+  &__lancerMask {
+    mask: url('./resourses/masks/lancerFemMask.png');
+  }
+
+  &__assassinMask {
+    mask: url('./resourses/masks/assassinFemMask.png');
+  }
+
+  &__berserkMask {
+    mask: url('./resourses/masks/berserkFemMask.png');
+  }
+
+  &__riderMask {
+    mask: url('./resourses/masks/riderFemMask.png');
+  }
+
+  &__casterMask {
+    mask: url('./resourses/masks/casterFemMask.png');
+  }
+
+  &__saberMask {
+    mask: url('./resourses/masks/saberFemMask.png');
+  }
+
+  &__archerMask {
+    mask: url('./resourses/masks/archerFemMask.png');
+  }
+
+  &__classDescription {
+    width: 38.5vw;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
+  }
+}
+
+.swiper-slide-active > img {
+  animation-name: fromShadow;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fromShadow {
+  0% {opacity: 0;}
+
+  100% {opacity: 1;}
+} 
+
+.toShadows {
+  animation: toShadow 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.toShadowsArrow {
+  animation: toShadowArrow 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes toShadowArrow {
+  0% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+  50% {
+      transform: translateY(25px);
+      opacity: 0.5;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 0;
+  }
+}

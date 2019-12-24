@@ -1,0 +1,98 @@
+.newGame {
+  width: 52vw;
+  height: 50vw;
+  position: absolute;
+  left: calc(50vw - 26vw);
+  top: 20px;
+  z-index: 2;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &::after {
+    position:absolute;
+    top: 0px;
+    width: 22vw;
+    height: 28vw;
+    background: url(./resourses/img/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: '';
+  }
+
+  &__gameName {
+    @include storyFont;
+    color: white;
+    font-weight: 500;
+    font-size: 7vw;
+    text-shadow: 0px 0px 7px #BDDCF3;
+    text-align: center;
+    width: 20vw;
+    z-index: 1;
+    line-height: 7vw;
+    margin-bottom: 7vw;
+  }
+
+  &__demoArrow {
+    @include demoArrowBottom;
+  }
+
+  &__button {
+    @include classicFont;
+    position: relative;
+	  display: block;
+	  padding: 15px;
+	  color: #fff;
+	  font-size: 16px;
+	  font-weight: bold;
+	  text-align: center;
+	  text-decoration: none;
+	  text-transform: uppercase;
+	  overflow: hidden;
+	  letter-spacing: 1px;
+	  border-radius: 0;
+    transition: all 0.5s ease;
+    background: none;
+
+    &:hover {
+      @include classicFont;
+      font-size: 24px;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+	    padding: 15px;
+	    color: black;
+	    font-weight: bold;
+	    text-decoration: none;
+	    text-transform: uppercase;
+	    overflow: hidden;
+	    letter-spacing: 1px;
+      border-radius: 0;
+    }
+
+    &::after {
+      content: "";
+	    position: absolute;
+	    height: 0%;
+	    left: 50%;
+	    top: 50%;
+	    width: 150%;
+      z-index: -1;
+      background: white;
+      transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+      transition: all 1s ease 0s;
+    }
+
+    &:hover::after {
+      height: 450%;
+    }
+
+    &:active:after {
+      background: #B0A882;
+      color: #1F1A14;
+    }
+  }
+}

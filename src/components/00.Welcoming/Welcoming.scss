@@ -1,0 +1,235 @@
+@import './resourses/styles/fonts';
+@import './resourses/styles/mixins';
+@import './resourses/styles/normalize';
+@import './resourses/styles/vars';
+@import './resourses/styles/_animations';
+
+@import './Music/Music';
+
+@import './00.NewGame/NewGame';
+@import './01.Story/Story';
+@import './02.RegistrationForm/RegistrationForm';
+@import './03.ClassChoose/ClassChoose';
+@import './03.ClassChoose/ClassDescription';
+@import './04.ClassStory/ClassStory';
+
+.stage {
+  background-image: url(./resourses/img/start-page.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100vh !important; 
+  position: relative;
+
+  &__fullscreen {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    z-index: 998;
+    background: url(./resourses/img/settingsBg.png);
+    background-size: contain;
+  }
+
+  &__arrows {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+    transform: scale(-1, -1) rotate(90deg);
+    z-index: 999;
+  }
+
+  &__arrow {
+    background: url(./resourses/img/windowArrow.png);
+    background-size: contain;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+  &__arrow_window1 {
+    top: 8px;
+    right: 8px;
+    &_anim {
+      animation-name: rotatingWindowTop;
+    }
+  }
+
+  &__arrow_window2 {
+    bottom: 8px;
+    left: 8px;
+    transform: scale(-1, 1) rotate(90deg);
+    &_anim {
+      animation-name: rotatingWindowBottom;
+    }
+  }
+
+  &__arrow_full1 {
+    top: 5px;
+    right: 5px;
+    transform: scale(-1, 1) rotate(90deg);
+    &_anim {
+      animation-name: rotatingFullTopLeft;
+    }
+  }
+
+  &__arrow_full2 {
+    bottom: 5px;
+    right: 5px;
+    transform: rotate(-90deg);
+    &_anim {
+      animation-name: rotatingFullTopRight;
+    }
+  }
+
+  &__arrow_full3 {
+    top: 5px;
+    left: 5px;
+    transform: rotate(90deg);
+    &_anim {
+      animation-name: rotatingFullBottomLeft;
+    }
+  }
+
+  &__arrow_full4 {
+    bottom: 5px;
+    left: 5px;
+    transform: scale(-1, 1) rotate(-90deg);
+    &_anim {
+      animation-name: rotatingFullBottomRight;
+    }
+  }
+}
+
+@keyframes rotatingWindowTop {
+  0% {top: translateX(0) translateY(0)}
+  
+  50% {transform: translateX(3px) translateY(-3px)}
+
+  100% {transform: translateX(0) translateY(0)}
+}
+
+@keyframes rotatingWindowBottom {
+  0% {transform: translateX(0) translateY(0) scale(-1, 1) rotate(90deg)}
+  
+  50% {transform: translateX(-3px) translateY(3px) scale(-1, 1) rotate(90deg)}
+
+  100% {transform: translateX(0) translateY(0) scale(-1, 1) rotate(90deg)}
+}
+
+.blackout {
+  &::before {
+    @include blackout;
+  }
+
+  &__largeToMiddle {
+    &::before {
+      animation-name: ltm;
+      animation-duration: 3s;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+    }
+  }
+
+  &__middleToLittle {
+    &::before {
+      animation-name: mtl;
+      animation-duration: 3s;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+    }
+  }
+
+  &__littleToNone {
+    &::before {
+      animation-name: ltn;
+      animation-duration: 3s;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+    }
+  }
+}
+
+.hide {
+  display: none;
+}
+
+@keyframes ltm {
+  0% {background: rgba(0%, 0%, 0%, 0.7);}
+
+  20% {background: rgba(0%, 0%, 0%, 0.66);}
+
+  40% {background: rgba(0%, 0%, 0%, 0.62);}
+
+  60% {background: rgba(0%, 0%, 0%, 0.58);}
+
+  80% {background: rgba(0%, 0%, 0%, 0.54);}
+  
+  100% {background: rgba(0%, 0%, 0%, 0.5);}
+}
+
+@keyframes mtl {
+  0% {background: rgba(0%, 0%, 0%, 0.5);}
+
+  20% {background: rgba(0%, 0%, 0%, 0.46);}
+
+  40% {background: rgba(0%, 0%, 0%, 0.42);}
+
+  60% {background: rgba(0%, 0%, 0%, 0.38);}
+
+  80% {background: rgba(0%, 0%, 0%, 0.34);}
+  
+  100% {background: rgba(0%, 0%, 0%, 0.30);}
+}
+
+@keyframes ltn {
+  0% {background: rgba(0%, 0%, 0%, 0.3);}
+
+  20% {background: rgba(0%, 0%, 0%, 0.24);}
+
+  40% {background: rgba(0%, 0%, 0%, 0.18);}
+
+  60% {background: rgba(0%, 0%, 0%, 0.12);}
+
+  80% {background: rgba(0%, 0%, 0%, 0.06);}
+  
+  100% {background: rgba(0%, 0%, 0%, 0);}
+}
+
+@keyframes rotatingFullTopLeft {
+  0% {transform: translateX(0) translateY(0) scale(-1, 1) rotate(90deg);}
+
+  50% {transform: translateX(-3px) translateY(3px) scale(-1, 1) rotate(90deg);}
+
+  100% {transform: translateX(0) translateY(0) scale(-1, 1) rotate(90deg);}
+}
+
+@keyframes rotatingFullTopRight {
+  0% {transform: translateX(0) translateY(0) rotate(-90deg);}
+
+  50% {transform: translateX(-3px) translateY(-3px) rotate(-90deg);}
+
+  100% {transform: translateX(0) translateY(0) rotate(-90deg);}
+}
+
+@keyframes rotatingFullBottomLeft {
+  0% {transform: translateX(0) translateY(0) rotate(90deg);}
+
+  50% {transform: translateX(3px) translateY(3px) rotate(90deg);}
+
+  100% {transform: translateX(0) translateY(0) rotate(90deg);}
+}
+
+@keyframes rotatingFullBottomRight {
+  0% {transform: translateX(0) translateY(0) scale(-1, 1) rotate(-90deg);}
+
+  50% {transform: translateX(3px) translateY(-3px) scale(-1, 1) rotate(-90deg);}
+
+  100% {transform: translateX(0) translateY(0) scale(-1, 1) rotate(-90deg);}
+}

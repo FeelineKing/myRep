@@ -1,0 +1,50 @@
+@import './fonts';
+
+@mixin blackout {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  content: '';
+  background: rgba(0%, 0%, 0%, 0.7);
+  z-index: 2;
+};
+
+@mixin storyFont {
+  font-family: 'Girassol';
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: white;
+}
+
+@mixin classicFont {
+  font-family: 'Create Round', serif;
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: white;
+}
+
+@mixin demoArrowBottom {
+  width: 50px;
+  min-height: 65px;
+  background-image: url(./resourses/img/arrow.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: demoArrow 1s infinite;
+  animation-timing-function: ease-in-out;
+  margin-bottom: 50px;
+  z-index: 999;
+
+  @keyframes demoArrow {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(25px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+  }
+}

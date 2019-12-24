@@ -1,0 +1,120 @@
+.storySection {
+  width: 100%;
+  height: 100vh;
+  background: black;
+  position: relative;
+  z-index: 5;
+  
+  &__background {
+    display: block;
+    height: 75vh;
+    width: 131.7vh;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+    opacity: 0;
+  }
+
+  &__toShadow {
+    animation-name: toShadow;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; 
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: calc((100% - 131.7vh) / 2);
+    height: 75vh;
+    width: 131.7vh;
+    background: url(./resourses/img/apocalypse-mask.png);
+    background-size: contain;
+    z-index: 20;
+  }
+
+  &__text {
+    color: white;
+    width: 110vh;
+    margin: 0 auto;
+    font-size: 2vh;
+  }
+
+  &__button {
+    background-color: rgba(19,19,19,0.35);
+    border: 2px solid white;
+    display: block;
+    color:#fff;
+    height: 30px;
+    width: 100px;
+    box-shadow: inset 0 0 7px rgba(0,0,0,0.5);
+    border-radius: 16px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    transition: all 0.1s ease-in-out 0.1s;
+    overflow: hidden;
+    font-size: 18px;
+    cursor: pointer;
+
+    &::before {
+      content: ".";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: transparent;
+      width: 100px;
+      height: 15px;
+      background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1) );
+      display: block;
+      transition: all 0.1s ease-in-out 0.1s;
+    }
+
+    &:hover {
+      border: 2px solid white;
+      width: 110px;
+      height: 35px;
+    }
+    
+    &:hover:before {
+      width: 110px;
+      height: 18px;
+    }
+  }
+}
+
+.fromShadow {
+  animation-name: fromShadow;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards; 
+}
+
+.toShadow {
+  animation-name: toShadow;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards; 
+}
+
+@keyframes fromShadow {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes toShadow {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
