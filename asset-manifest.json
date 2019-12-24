@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/myRep/static/css/main.b7e539e7.chunk.css",
+    "main.js": "/myRep/static/js/main.ea831c1d.chunk.js",
+    "main.js.map": "/myRep/static/js/main.ea831c1d.chunk.js.map",
+    "runtime-main.js": "/myRep/static/js/runtime-main.88a49f56.js",
+    "runtime-main.js.map": "/myRep/static/js/runtime-main.88a49f56.js.map",
+    "static/js/2.c82170eb.chunk.js": "/myRep/static/js/2.c82170eb.chunk.js",
+    "static/js/2.c82170eb.chunk.js.map": "/myRep/static/js/2.c82170eb.chunk.js.map",
+    "index.html": "/myRep/index.html",
+    "precache-manifest.13a1725e270126c3e22638f0903870a1.js": "/myRep/precache-manifest.13a1725e270126c3e22638f0903870a1.js",
+    "service-worker.js": "/myRep/service-worker.js",
+    "static/css/main.b7e539e7.chunk.css.map": "/myRep/static/css/main.b7e539e7.chunk.css.map",
+    "static/js/2.c82170eb.chunk.js.LICENSE": "/myRep/static/js/2.c82170eb.chunk.js.LICENSE",
+    "static/media/KotomineKirei.png": "/myRep/static/media/KotomineKirei.a683f98e.png",
+    "static/media/Welcoming.css": "/myRep/static/media/start-page.d8546566.jpg",
+    "static/media/apocalypse01.jpg": "/myRep/static/media/apocalypse01.1af68967.jpg",
+    "static/media/apocalypse02.jpg": "/myRep/static/media/apocalypse02.724b5f9a.jpg",
+    "static/media/apocalypse03.jpg": "/myRep/static/media/apocalypse03.6daf9ddb.jpg",
+    "static/media/apocalypse04.jpg": "/myRep/static/media/apocalypse04.8b73e2ae.jpg",
+    "static/media/femArcher.png": "/myRep/static/media/femArcher.e1883656.png",
+    "static/media/femAssassin.png": "/myRep/static/media/femAssassin.5892a9b1.png",
+    "static/media/femBerserk.png": "/myRep/static/media/femBerserk.1370b3f0.png",
+    "static/media/femCaster.png": "/myRep/static/media/femCaster.b3ba0e41.png",
+    "static/media/femLancer.png": "/myRep/static/media/femLancer.a50a9b78.png",
+    "static/media/femRider.png": "/myRep/static/media/femRider.322807fa.png",
+    "static/media/femSaber.png": "/myRep/static/media/femSaber.8d237660.png",
+    "static/media/introAudio.mp3": "/myRep/static/media/introAudio.5a52cebb.mp3",
+    "static/media/speakerFull.png": "/myRep/static/media/speakerFull.41026f0e.png",
+    "static/media/speakerLow.png": "/myRep/static/media/speakerLow.63d13280.png",
+    "static/media/speakerMid.png": "/myRep/static/media/speakerMid.e3787c2c.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.88a49f56.js",
+    "static/js/2.c82170eb.chunk.js",
+    "static/css/main.b7e539e7.chunk.css",
+    "static/js/main.ea831c1d.chunk.js"
+  ]
+}
